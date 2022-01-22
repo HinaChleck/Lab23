@@ -17,7 +17,7 @@ namespace Lab33
                     f *= i;
                     if (i < x)
                     {
-                        Console.WriteLine(f);
+                        Console.WriteLine("{0}!={1}", i, f);
                     }
                     Thread.Sleep(100);
                 }
@@ -27,10 +27,10 @@ namespace Lab33
         }
         static void Main(string[] args)
         {
-            Console.Write("Введите число для вычисления факториала (целое, положительное,  < 66):");
+            Console.Write("Введите число для вычисления факториала (целое, положительное, до 20 включительно):");
             string numS = Console.ReadLine();
 
-            if (uint.TryParse(numS, out uint num) & num <= 65)
+            if (uint.TryParse(numS, out uint num) & num <= 20)
             {
                 Console.WriteLine("Факториал {0}!={1}", num, FactorialAsync(num).Result);
             }
